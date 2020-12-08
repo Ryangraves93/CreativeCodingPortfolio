@@ -1,0 +1,94 @@
+/* -------------- <GLOBAL> -------------- */
+body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    list-style: none;
+    background-color: #161616;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #FFD700;
+    text-decoration: none;
+}
+/* -------------- </GLOBAL> -------------- */
+
+
+/* -------------- <COLOUR THEME> -------------- */
+.primaryCol {
+    color: #161616;
+}
+
+.primaryColBackground {
+    background-color: #161616;
+}
+
+.secondaryCol {
+    color: #252525;
+}
+
+.secondaryColBackground {
+    background-color: #252525;
+}
+
+.tertiaryCol {
+    color: #f3f3f3;
+}
+
+.tertiaryColBackground {
+    color: #f3f3f3;
+}
+/* -------------- </COLOUR THEME> -------------- */
+
+
+/* -------------- <NAVBAR> -------------- */
+.navHead {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+}
+
+.navHeadSpan {
+    color: #955cdb;
+}
+/* -------------- </NAVBAR> -------------- */
+
+
+/* -------------- <CARDS> -------------- */
+.cardTitle {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 21px;
+}
+
+.cardBody {
+    font-family: 'Open Sans', sans-serif;
+    /* text-transform: uppercase; */
+    letter-spacing: 0.5px;
+    font-size: 16px;
+}
+/* -------------- </CARDS> -------------- */
+
+
+/* -------------- <BUTTONS> -------------- */
+.btnBackground {
+    text-decoration: none;
+    border: none;
+    color: white;
+    background-color: #7948b6;
+}
+
+.btnBackground:hover {
+    text-decoration: none;
+    border: none;
+    color: black;
+    background-color: #FFD700;
+}
+/* -------------- </BUTTONS> -------------- */
