@@ -24,6 +24,10 @@ a:hover {
     color: #161616;
 }
 
+.ParagraphText {
+    color: #f3f3f3;
+}
+
 .primaryColBackground {
     background-color: #161616;
 }
@@ -45,6 +49,11 @@ a:hover {
 }
 /* -------------- </COLOUR THEME> -------------- */
 
+/* -------------- <GENERAL> -------------- */
+.main {
+    margin-bottom: 100px;    
+}
+/* -------------- </GENERAL> -------------- */
 
 /* -------------- <NAVBAR> -------------- */
 .navHead {
@@ -73,6 +82,11 @@ a:hover {
     /* text-transform: uppercase; */
     letter-spacing: 0.5px;
     font-size: 16px;
+}
+
+.image-container img {
+    width: 326px;
+    height: 326px;
 }
 /* -------------- </CARDS> -------------- */
 
