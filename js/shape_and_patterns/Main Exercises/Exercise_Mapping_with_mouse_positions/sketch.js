@@ -43,8 +43,6 @@ function ColorWheel() {
         vertex(0, 0);
          let x = (radius * cos(i));
          let y = (radius * sin(i));
-         
-
          vertex(x, y);
          endShape(CLOSE);
      }   

@@ -13,9 +13,9 @@ function setup() {
   noStroke();
 }
 
-/**
- * Creates multiple vertex's using a for loop
- */
+
+ //Creates multiple vertex's using a for loop
+ 
 function draw() {
   numOfSegments = map(mouseX, 0, width, 10, 40);
   stepAngle = 360 / numOfSegments;
@@ -24,29 +24,18 @@ function draw() {
   translate(250, 250);
   fill(200, 500, 100);
 
-  /**
-   * Create the triangle fan
-   */
   beginShape(TRIANGLE_FAN);
 
-  /**
-   * Center point to the triangle fan
-   */
   vertex(0, 0);
 
   for (let i = 0; i <= 360; i = i + stepAngle) {
-    /**
-     * Calculate vx & vy using cos & sin
-     */
-    const vx = radius * cos(i);
-    const vy = radius * sin(i);
+    let vx = radius * cos(i);
+    let vy = radius * sin(i);
 
     fill(i, 100, 100);
     vertex(vx, vy);
   }
-  /**
-   * End the triangle fan
-   */
+
   endShape();
   pop();
 }

@@ -41,21 +41,7 @@
             <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link">|</a>
-          </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="./components/shapeAndColours.html">Shapes & Colours</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link">|</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="./components/shapeAndPatterns.html">Shapes & Patterns</a>
-          </li>
         </ul>
       </div>
     </nav>
@@ -65,16 +51,26 @@
         <iframe src="./../js/shape_and_colours/Main_Exercises/Exercise_ColorWheel/index.html" frameborder="0"
           scrolling="no" style="height: 500px; width: 500px;" height="100%" width="49%"></iframe>
           
-        <p>legends</p>
       </div>
         <div class="col-md-6" style = "padding-top: 2rem; color: aliceblue;">
+          <h4>| Description</h4>
           <p>Develping on the previous concept of the HSB grid, the sketch is a 
              color wheel made of triangle fans. The triangle fan segments are mapped to x position of the mouse.
           </p>
-
+          <a href="https://github.com/Ryangraves93/CreativeCodingPortfolio/blob/master/js/shape_and_colours/Main_Exercises/Exercise_ColorWheel/sketch.js" target="_blank">Code Link</a>
+          <h4>| Functionality</h4>
           <ul>
             <li>Coordinates are calculated by getting the sine & cosine of the angle and multiplying it by the desired radius</li>
+            <ul>
+              <li><i><p>let vx = radius * cos(i)</br>
+                let vy = radius * sin(i);</i></p></li>
+            </ul>
             <li>Iterator on the loop is mapped to value of the x position of the mouse</li>
+            <ul>
+              <li>
+                <i>numOfSegments = map(mouseX, 0, width, 10, 40);</i>
+              </li>
+            </ul>
           </ul>
         </div>
 

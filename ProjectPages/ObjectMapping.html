@@ -40,22 +40,6 @@
           <li class="nav-item active">
             <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
           </li>
-
-          <li class="nav-item">
-            <a class="nav-link">|</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="./components/shapeAndColours.html">Shapes & Colours</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link">|</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="./components/shapeAndPatterns.html">Shapes & Patterns</a>
-          </li>
         </ul>
       </div>
     </nav>
@@ -65,19 +49,35 @@
         <iframe src="./../js/shape_and_patterns/Main%20Exercises/Exercise_Mapping_with_mouse_positions/index.html" frameborder="0"
           scrolling="no" style="height: 500px; width: 500px;" height="100%" width="49%"></iframe>
          
-        <p>legends</p>
+  
       </div>
         <div class="col-md-6" style = "padding-top: 2rem; color: aliceblue;">
+          <h4>| Description</h4>
           <p>From there we implemented a sketch implementing x & y axis mapping to an object shape.
           </p>
 
+          <a href="https://github.com/Ryangraves93/CreativeCodingPortfolio/blob/master/js/shape_and_patterns/Main%20Exercises/Exercise_Mapping_with_mouse_positions/sketch.js" target="_blank">Code Link</a>
+          <h4>| Functionality</h4>
           <ul>
             <li>First implmentation of tau, which is an alias for two pi. Tau is used by dividing 
               the number of desired segments, and then using the angles to calculate the x & y.                   
             </li>
+            <ul>
+              <li><i><p>for (let i = 0; i <= TAU; i += stepAngle) {</br>
+                beginShape(LINES);</br>
+                vertex(0, 0);</br>
+                 let x = (radius * cos(i));</br>
+                 let y = (radius * sin(i));</br>
+                 vertex(x, y);</br>
+                 endShape(CLOSE);</p></i></li>
+            </ul>
             <li>The radius of is then mapped between the width of the canvas 
               and the mouse stroke is mapped between the height of the canvas.
             </li>
+            <ul>
+              <li><i><p>radius = map(mouseX,0,width,-250,250);</br>
+                mouseStroke = map(mouseY,0,height,0,25);</p></i></li>
+            </ul>
           </ul>
         </div>
 
