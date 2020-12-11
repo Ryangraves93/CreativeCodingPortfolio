@@ -53,7 +53,7 @@ function GeneratePoints() {
             }
         }
     }
-    pop(); //its not pop is it? nope not pop. getting there though i'd say
+    pop(); 
 }
 
 //Intialize canvas size and randomized strokeweight.
@@ -96,7 +96,6 @@ function DrawTriangles(v0, v1, v2) {
 //Calculate a mid point between three given points by sum the x and y values and 
 //diving each by 3. Then place the result into a vector and return it.
 function CalculateMid(pointA, pointB, center) {
-
     let mid = createVector((pointA.x + center.x + pointB.x) / 3, (pointA.y + center.y + pointB.y) / 3);
     return mid;
 }
