@@ -22,8 +22,8 @@ class RotatingSquare{
     }
 
     lerpOnMouseMove(){
-        let from = color(this.x + 120,this.y + 120,100);
-        let to = color(this.x * 2,this.y * 2,100);
+        let from = color(this.x + 60,this.y + 60,100);
+        let to = color(this.x * 3,this.y * 3,100);
         let mouseMapX = map(mouseX,0,width,0,1);
         let mouseMapY = map(mouseY,0,height,0,1);
         let interA = lerpColor(from,to,mouseMapX*mouseMapY);

@@ -68,13 +68,33 @@
         <p>legends</p>
       </div>
         <div class="col-md-6" style = "padding-top: 2rem; color: aliceblue;">
-          <p>First exercise using HSB values which used the iterators to display
-            all values using color mode HSB.
+          <p>A vertex painter using ideas from previous implementations of vertices. Maps
+            the mouse clicks of into an array which then draws the shape to the screen
+            using the vertices.
           </p>
 
+          <h4>Functionality</h4>
+
           <ul>
-            <li>Nested for loop</li>
-            <li>HSB color mode introduction</li>
+            <li>Implements a color wheel which the user selects the color and then generates
+              a color compliment.
+            </li>
+            <li>Provides a slider to scale number of segments for finer HSB values.</li>
+            <li>Uses p5's getColor function which stores the color at the mouse position into
+              a variable which then must be converted from RGB to HSB by mapping it to the index value.
+            </li>
+            <ul>
+              <li><i>selectedColor = color(`rgba(${c.map((dat) => dat)})`)</i></li>
+            </ul>
+            <li>When a user has selected the number of vertices, it runs a call to
+              a function called DrawVertexShape which loops through the vertex array
+            </li>
+            <ul>
+              <li><i>for (let i = 0; i <= numOfDrawVertices *2; i += 2) 
+                        <p style = "text-indent: 20px">vertex (vertexArr[i], vertexArr[i + 1])</i></p>
+              </li>
+            </ul>
+            <li>iterates over the index array by a value of two to draw each x & y value.</li>
           </ul>
         </div>
 

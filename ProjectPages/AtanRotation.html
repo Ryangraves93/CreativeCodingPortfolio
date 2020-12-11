@@ -68,13 +68,28 @@
         <p>legends</p>
       </div>
         <div class="col-md-6" style = "padding-top: 2rem; color: aliceblue;">
-          <p>First exercise using HSB values which used the iterators to display
-            all values using color mode HSB.
+          <p> A sketch building on previous mapping functionality. For this implementation
+            we developed on the previous sketch by implementing atan2 which is the tangent 
+            inverse. The grid is split into multiple objects which all deal with their own 
+            rotation.
           </p>
 
           <ul>
-            <li>Nested for loop</li>
-            <li>HSB color mode introduction</li>
+            <li>Calculates theta,the rotation angle by passing in the mouse position y & x</li>
+              <ul>
+                <li><i>var theta = atan2(mouseY - this.y,mouseX - this.x)</i></li>
+              </ul>
+            <li>Rotates the classes inner circle around the angle</li>
+            <ul>
+              <li><i>rotate(theta)</i></li>
+            </ul>
+            <li>Maps the size and the offset to distance between it's x & x position and the 
+              mouse position x & y.
+            </li>
+            <ul>
+              <li><i>var size = map(dist(this.x,this.y,mouseX,mouseY),0,width,5,15)</i></li>
+              <li>var offset = map(dist(this.x,this.y,mouseX,mouseY),0,width,0,10)</li>
+            </ul>
           </ul>
         </div>
 

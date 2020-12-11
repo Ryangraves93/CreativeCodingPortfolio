@@ -22,12 +22,12 @@ function setup() {
 //Generate a 2D array of vectors that are serve as the points to draw a triangle, then pass these points
 //into the DrawTriangles function which creates 3 triangles out of one by joining them at the midpoint. 
 function GeneratePoints() {
-    let modifier = 50;
+    let modifier = 20;
     let scaler = random(1.5,2.0);
     for (let j = 0; j * modifier < width; j++) {
         RowPoints[j] = []
         for (let i = 0; i * modifier < height; i++) {
-            let offset = random(0,60);
+            let offset = random(0,20);
             if (j % 2 == 0) {
                 RowPoints[j].push(createVector(((i * scaler)* modifier + offset), (j * scaler) * modifier));
             }
@@ -64,7 +64,7 @@ function IntializeCanvas() {
     rectMode(CENTER);
     colorPalletteID = int(random(0,colorArray.length));
     let randomStroke = random(0.2,4);
-    strokeWeight(randomStroke);
+    strokeWeight(.2);
 }
 
 

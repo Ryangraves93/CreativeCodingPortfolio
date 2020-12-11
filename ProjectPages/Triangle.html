@@ -68,14 +68,37 @@
         <p>legends</p>
       </div>
         <div class="col-md-6" style = "padding-top: 2rem; color: aliceblue;">
-          <p>First exercise using HSB values which used the iterators to display
-            all values using color mode HSB.
-          </p>
+          <h4 style = "margin-top: -5%;">Description</h4>
+          <p>A set of subdivided triangles using a 2-dimensional array. Creating a grid of vertices, I then
+            subdivided these points down to 3 triangles and then passed the data into a function to render 
+            the triangles. 
 
+          <h4>Functionality</h4>
           <ul>
-            <li>Nested for loop</li>
-            <li>HSB color mode introduction</li>
+            <li><p>Generates an equally distributed amount of points across each row as vectors which then get placed into a 2-D array .</br>
+            </p></li>
+            <ul>
+              <li>
+                <i>RowPoints[j].push( createVector(((i * scaler)* modifier + offset), (j * scaler) * modifier))</i>
+            </ul>
+            <li>Taking the modulo of the row number to determine what order to draw the triangles in.</li>
+            <ul>
+              <li><p><i>DrawTriangles(RowPoints[i + 1][j], RowPoints[i][j], RowPoints[i][j + 1])</br>
+                DrawTriangles(RowPoints[i][j + 1], RowPoints[i + 1][j + 1], RowPoints[i + 1][j])</i></p></li>
+            </ul>
+            <li>Then in the DrawTriangles function, runs a call to get the mid-point of the data passed in, then draws three
+              triangles using the given data.
+              <ul>
+                <li><i><p>function CalculateMid(pointA, pointB, center) </br>
+                  let mid = createVector((pointA.x + center.x + pointB.x) / 3, (pointA.y + center.y + pointB.y) / 3)</br>
+                  return mid;</i></p>
+              </li>
+              </ul>
+            </p>
+   
           </ul>
+          </p>
+        </ul>
         </div>
 
       </div>

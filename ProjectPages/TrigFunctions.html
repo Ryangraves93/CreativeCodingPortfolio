@@ -65,17 +65,37 @@
         <iframe src="./../js/shape_and_patterns/Main%20Exercises/ExerciseTrigFunctionsUsingLerp/index.html" frameborder="0"
           scrolling="no" style="height: 500px; width: 500px;" height="100%" width="49%"></iframe>
          
-        <p>legends</p>
+  
       </div>
+    
         <div class="col-md-6" style = "padding-top: 2rem; color: aliceblue;">
-          <p>First exercise using HSB values which used the iterators to display
-            all values using color mode HSB.
-          </p>
+          <h4>Description</h4>
+          <p>Integration of previous exercises by creating a linear interpolation between
+          two variables based on their x and y positions, and mapping that to the canvas.
 
+          <h4>Functionality</h4>
           <ul>
-            <li>Nested for loop</li>
-            <li>HSB color mode introduction</li>
+            <li>Creates two values to be a start and end point.</li>
+            <ul>
+            <li><i> <p>let from = color( this.x + 120, this.y + 120,100)</br>
+              let to = color( this.x * 2, this.y * 2,100)</i></li></p>
           </ul>
+          <li>Creates a two mapping variables to both the width and height of the canvas.</li>
+          <ul>
+            <li><p><i>let mouseMapX = map(mouseX,0,width,0,1)</i></br>
+              <i>let mouseMapY = map(mouseY,0,height,0,1)</i></p></li>
+          </ul>
+          <li>Then creates the call for lerpColor by passing in all the 
+            caluclated variables
+          </li>
+          <ul>
+            <li>
+              <p><i>let interA = lerpColor(from,to,mouseMapX*mouseMapY)</i></br>
+              <i>return interA</i></p>
+            </li>
+          </ul>
+          </p>
+        </ul>
         </div>
 
       </div>
