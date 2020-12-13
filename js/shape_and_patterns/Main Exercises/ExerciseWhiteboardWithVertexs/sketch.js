@@ -57,7 +57,7 @@ function IntializeCanvas()
 {
     createCanvas(500, 500);
     colorMode(HSB, 360, 100, 100);
-    setGradient();
+    //setGradient();
     angleMode(DEGREES);
     
 }
@@ -69,21 +69,21 @@ function InitializeUI()
     // PaintButton.hide();
     PaintButton.mousePressed(EnablePaintMode);
 
-    VertexModeButtonOn = createButton('Vertex Mode - On');
-    VertexModeButtonOn.position(380, 19);
-    VertexModeButtonOn.mousePressed(VertexMode);
-    VertexModeButtonOn.style('background-color', color1);
-    VertexModeButtonOn.style('font-size', '16px');
-    VertexModeButtonOn.hide();
+    // VertexModeButtonOn = createButton('Vertex Mode - On');
+    // VertexModeButtonOn.position(380, 19);
+    // VertexModeButtonOn.mousePressed(VertexMode);
+    // VertexModeButtonOn.style('background-color', color1);
+    // VertexModeButtonOn.style('font-size', '16px');
+    // VertexModeButtonOn.hide();
 
-    VertexModeButtonOff = createButton('Vertex Mode - Off');
-    VertexModeButtonOff.position(380, 19);
-    VertexModeButtonOff.mousePressed(VertexMode);
-    VertexModeButtonOff.style('background-color', color1);
-    VertexModeButtonOff.style('font-size', '16px');
-    VertexModeButtonOff.hide();
+    // VertexModeButtonOff = createButton('Vertex Mode - Off');
+    // VertexModeButtonOff.position(380, 19);
+    // VertexModeButtonOff.mousePressed(VertexMode);
+    // VertexModeButtonOff.style('background-color', color1);
+    // VertexModeButtonOff.style('font-size', '16px');
+    // VertexModeButtonOff.hide();
 
-    BackButton = createButton('Back');
+    BackButton = createButton('Clear');
     BackButton.position(width / 2 - 20, 60);
     BackButton.mousePressed(Back);
     BackButton.hide();
@@ -94,19 +94,6 @@ function InitializeUI()
     vertexSlider.changed(RedrawColorWheel)
     NumberOfVertices = vertexSlider.value();
 }
-
-function setGradient() {
-  
-    gc1 = color(30, 100, 100);
-    gc2 = color(0,100,60);
-    noFill();
-    for (let y = 0; y < height; y++) {
-      let inter = map(y, 0, height, 0, 1);
-      let c = lerpColor(gc1, gc2, inter);
-      stroke(c);
-      line(0, y, width, y);
-    }
-  }
 
 function RedrawColorWheel() {
     clear();
@@ -170,13 +157,12 @@ function mouseClicked() {
 function EnablePaintMode() {
     if (bColorsPicked)
     {
-        bVertexMode = false;
+        bVertexMode = true;
         bColorSelection = true;
         clear();
         vertexSlider.hide();
         PaintButton.hide();
         ColorSelection();
-        VertexModeButtonOff.show();
         BackButton.show();
     }
 }
