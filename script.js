@@ -8,7 +8,7 @@ const objects = [
     {
         name: "Circle boys",
         desc: "Experimenting with the use of grids.",
-        path: "/ProjectPages/AtanRotation.html",
+        path: "./ProjectPages/AtanRotation.html",
         imgSrc: "images/Ex3.png",
       },
   ];
