@@ -1,108 +1,52 @@
-/* -------------- <GLOBAL> -------------- */
 body {
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    list-style: none;
-    background-color: #161616;
+    background-color: #000;
 }
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-a:hover {
-    color: #FFD700;
-    text-decoration: none;
-}
-/* -------------- </GLOBAL> -------------- */
-
-
-/* -------------- <COLOUR THEME> -------------- */
-.primaryCol {
-    color: #161616;
-}
-
-.ParagraphText {
-    color: #f3f3f3;
-}
-
-.primaryColBackground {
-    background-color: #161616;
-}
-
-.secondaryCol {
-    color: #252525;
-}
-
-.secondaryColBackground {
-    background-color: #252525;
-}
-
-.tertiaryCol {
-    color: #f3f3f3;
-}
-
-.tertiaryColBackground {
-    color: #f3f3f3;
-}
-/* -------------- </COLOUR THEME> -------------- */
-
-/* -------------- <GENERAL> -------------- */
-.main {
-    margin-bottom: 100px;    
-}
-/* -------------- </GENERAL> -------------- */
-
-/* -------------- <NAVBAR> -------------- */
-.navHead {
-    font-family: 'Raleway', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-size: 20px;
-}
-
-.navHeadSpan {
-    color: #955cdb;
-}
-/* -------------- </NAVBAR> -------------- */
-
-
-/* -------------- <CARDS> -------------- */
-.cardTitle {
-    font-family: 'Raleway', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-size: 21px;
-}
-
-.cardBody {
-    font-family: 'Open Sans', sans-serif;
-    /* text-transform: uppercase; */
-    letter-spacing: 0.5px;
-    font-size: 16px;
-}
-
-.image-container img {
-    width: 326px;
-    height: 326px;
-}
-/* -------------- </CARDS> -------------- */
-
-
-/* -------------- <BUTTONS> -------------- */
-.btnBackground {
-    text-decoration: none;
-    border: none;
-    color: white;
-    background-color: #7948b6;
-}
-
-.btnBackground:hover {
-    text-decoration: none;
-    border: none;
-    color: black;
-    background-color: #FFD700;
-}
-/* -------------- </BUTTONS> -------------- */
+  
+  a {
+    color: #1ED760;
+  }
+  .btn-primary {
+    background-color: #1ED760;
+    border-color: #1ED760;
+    color: #000;
+  }
+  
+  .btn-primary:hover {
+    background-color: #1ED760;
+    border-color: #00000000;
+  }
+  
+  .card-title {
+    color: #fff;
+  }
+  
+  .card-text {
+    color: #ffffffa8;
+  }
+  
+  .jumbotron {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    color: #fff;
+    background-color: #1ED760;
+  }
+  @media screen and (min-width: 768px) {
+    .jumbotron {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  }
+  
+  .jumbotron .h1,
+  .jumbotron h1 {
+    color: inherit;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .jumbotron .h1,
+    .jumbotron h1 {
+      font-size: 63px;
+    }
+  }
+  
