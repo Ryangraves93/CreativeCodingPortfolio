@@ -53,35 +53,39 @@
       </div>
         <div class="col-md-6" style = "padding-top: 2rem; color: aliceblue;">
           <h4>| Description</h4>
-          <p>A vertex painter using ideas from previous implementations of vertices. Maps
-            the mouse clicks of into an array which then draws the shape to the screen
-            using the vertices.
+          <p>A circle packing algorithm which has responsibility to check for valid spawn
+            points for any new circle.
           </p>
 
           <a href = "https://github.com/Ryangraves93/CreativeCodingPortfolio/blob/master/js/shape_and_patterns/Main%20Exercises/ExerciseWhiteboardWithVertexs/sketch.js" target="_blank">Code Link</a>
 
-          <h4>| Functionality</h4>
+          <h4>| Functionassslity</h4>
 
           <ul>
-            <li>Implements a color wheel which the user selects the color and then generates
-              a color compliment.
+            <li>The system creates a new circle and stores each object within an array.
             </li>
-            <li>Provides a slider to scale number of segments for finer HSB values.</li>
-            <li>Uses p5's getColor function which stores the color at the mouse position into
-              a variable which then must be converted from RGB to HSB by mapping it to the index value.
+            <li>The functionality works by consitently checking againist any distance between two points.</li>
+            <li>If the distance between the points is less than the combination of radii, then space is deemed
+              occupied
             </li>
             <ul>
-              <li><i>selectedColor = color(`rgba(${c.map((dat) => dat)})`)</i></li>
+              <li><i>let valid = true;<br>
+                for (let i = 0; i < circles.length; i++) {<br>
+                  let circle = circles[i];<br>
+                  let distance = dist(x, y, circle.x, circle.y);<br>
+                  if (distance < circle.r) {<br>
+                    valid = false;<br>
+                    break;<br>
+                  }</i></li>
             </ul>
-            <li>When a user has selected the number of vertices, it runs a call to
-              a function called DrawVertexShape which loops through the vertex array
+            <li>The growing algorithm consistently increments the radius, then runs a check for the previous collition check.
             </li>
             <ul>
-              <li><i>for (let i = 0; i <= numOfDrawVertices *2; i += 2) 
-                        <p style = "text-indent: 20px">vertex (vertexArr[i], vertexArr[i + 1])</i></p>
+              <li><i>  let distance = dist(circle.x, circle.y, circleToCheck.x, circleToCheck.y);<br>
+                let distanceToCheck = circle.r + circleToCheck.r;<br></i></p>
               </li>
             </ul>
-            <li>iterates over the index array by a value of two to draw each x & y value.</li>
+           
           </ul>
         </div>
 

@@ -46,16 +46,15 @@
 
     <div class="row">
       <div class="col-md-6">
-        <iframe src="./../js/shape_and_patterns/Main%20Exercises/ExerciseWhiteboardWithVertexs/index.html" frameborder="0"
+        <iframe src="./../js/shape_and_patterns/Main%20Exercises/LineAngles/index.html" frameborder="0"
           scrolling="no" style="height: 500px; width: 500px;" height="100%" width="49%"></iframe>
          
         
       </div>
         <div class="col-md-6" style = "padding-top: 2rem; color: aliceblue;">
           <h4>| Description</h4>
-          <p>A vertex painter using ideas from previous implementations of vertices. Maps
-            the mouse clicks of into an array which then draws the shape to the screen
-            using the vertices.
+          <p>An algorithm designed to determine a scalable number of angles
+            for each boundry.
           </p>
 
           <a href = "https://github.com/Ryangraves93/CreativeCodingPortfolio/blob/master/js/shape_and_patterns/Main%20Exercises/LineAngles/sketch.js" target="_blank">Code Link</a>
@@ -63,26 +62,26 @@
           <h4>| Functionality</h4>
 
           <ul>
-            <li>Implements a color wheel which the user selects the color and then generates
-              a color compliment.
+            <li>Uses trigonmetic functions to adjust it's angle and calculate 
+              a new tragectory.
             </li>
-            <li>Provides a slider to scale number of segments for finer HSB values.</li>
-            <li>Uses p5's getColor function which stores the color at the mouse position into
-              a variable which then must be converted from RGB to HSB by mapping it to the index value.
-            </li>
+            <li>Uses a random float value for strokeweight each time a line hits a canvas edge.</li>
+            
             <ul>
-              <li><i>selectedColor = color(`rgba(${c.map((dat) => dat)})`)</i></li>
+              <li><i>if ( yPos < 0){
+                angle = floor(random(0,180));
+                strokeWeight(random(0.2,4));
+              }</i></li>
             </ul>
+            
             <li>When a user has selected the number of vertices, it runs a call to
               a function called DrawVertexShape which loops through the vertex array
             </li>
             <ul>
-              <li><i>for (let i = 0; i <= numOfDrawVertices *2; i += 2) 
-                        <p style = "text-indent: 20px">vertex (vertexArr[i], vertexArr[i + 1])</i></p>
+              <li><i>
+                xPos += cos(radians(angle)) * stepSize;<br>
+                yPos += sin(radians(angle)) * stepSize;</i></p>
               </li>
-            </ul>
-            <li>iterates over the index array by a value of two to draw each x & y value.</li>
-          </ul>
         </div>
 
       </div>
